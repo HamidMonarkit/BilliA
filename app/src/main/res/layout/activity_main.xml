@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#CCCCCC"
+        android:scaleType="fitCenter"
+        android:contentDescription="Selected Image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Number:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etInvoiceNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Invoice Number"
+                android:inputType="text"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Date:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etInvoiceDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Invoice Date"
+                android:inputType="date"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de facture :"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/spInvoiceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/invoice_types_array"
+                android:padding="8dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etSeller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seller Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Client Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Net Amount:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etTotalNetAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Net Amount"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Gross Amount:"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etTotalGrossAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gross Amount"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caméra"
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galerie"
+            android:layout_marginStart="8dp"/>
+        <Button
+            android:id="@+id/btnSendToZohoFlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Books"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnExcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excel"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/> </LinearLayout>
